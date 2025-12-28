@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSE/BSE Watchlist - Live Trading</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> NSE/BSE Watchlist</h1>
+            <div class="status" id="market-status">Market Closed</div>
+        </header>
+
+        <!-- News Box -->
+        <section class="news-section">
+            <h2><i class="fas fa-newspaper"></i> Latest News</h2>
+            <div id="news-box" class="news-container"></div>
+        </section>
+
+        <!-- Watchlist -->
+        <section class="watchlist-section">
+            <h2><i class="fas fa-list"></i> Watchlist</h2>
+            <div class="watchlist-controls">
+                <input id="add-stock" placeholder="Add NSE/BSE symbol (RELIANCE, TCS)" maxlength="20">
+                <button onclick="addToWatchlist()"><i class="fas fa-plus"></i> Add</button>
+                <button onclick="clearWatchlist()" class="clear-btn"><i class="fas fa-trash"></i> Clear</button>
+            </div>
+            <ul id="stock-list" class="stock-list"></ul>
+        </section>
+
+        <!-- Stock Details Modal -->
+        <div id="stock-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3 id="modal-title"></h3>
+                <canvas id="price-chart"></canvas>
+                <div id="stock-details" class="stock-info"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
