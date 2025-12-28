@@ -1,7 +1,7 @@
 // API Endpoints
 const NSE_API = 'http://nse-api-khaki.vercel.app:5000';
 const NEWS_API = 'https://api.marketaux.com/v1/news/all';
-const NEWS_KEY = 'YOUR_MARKETAUX_KEY'; // Get free at marketaux.com
+const NEWS_KEY = 'KZBCT0jFlR2h5PJkLpHxYg1uIS2tXkOiSwRyIXuN'; // Get free at marketaux.com
 
 // Global variables
 let watchlist = JSON.parse(localStorage.getItem('watchlist')) || ['RELIANCE', 'TCS', 'INFY', 'HDFCBANK'];
